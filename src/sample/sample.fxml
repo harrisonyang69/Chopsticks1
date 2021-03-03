@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="30.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Main Menu">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="212.0" layoutY="30.0" text="Chopsticks Game" textFill="#ff7700">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="43.0" layoutY="97.0" prefHeight="38.0" prefWidth="514.0" text="Welcome to chopsticks! To play, press Start Game. Close this window to exit.">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonStartGame" layoutX="262.0" layoutY="228.0" mnemonicParsing="false" onMouseClicked="#startGame" text="Start Game" />
+                        <Button fx:id="buttonSaveScores" disable="true" layoutX="187.0" layoutY="305.0" mnemonicParsing="false" onMouseClicked="#saveScores" text="Save Game" />
+                        <Button fx:id="buttonLoadGame" layoutX="338.0" layoutY="305.0" mnemonicParsing="false" onMouseClicked="#loadGame" text="Load Game" />
+                        <Button layoutX="245.0" layoutY="161.0" mnemonicParsing="false" onMouseClicked="#printInstructions" text="Show Instructions" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="user1Choice" disable="true" text="User 1 Choice">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="186.0" layoutY="25.0" text="Player 1, please choose your move">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonLeftHit" layoutX="196.0" layoutY="80.0" mnemonicParsing="false" onMouseClicked="#leftHit" text="Left Hit" textFill="#fd0000" />
+                        <Button fx:id="buttonRightHit" layoutX="337.0" layoutY="80.0" mnemonicParsing="false" onMouseClicked="#rightHit" text="Right Hit" textFill="RED" />
+                        <Button fx:id="buttonRightCombine" layoutX="239.0" layoutY="215.0" mnemonicParsing="false" onMouseClicked="#rightCombine" text="Right Combine" textFill="RED" />
+                        <Button fx:id="buttonLeftCombine" layoutX="243.0" layoutY="293.0" mnemonicParsing="false" onMouseClicked="#leftCombine" text="Left Combine" textFill="RED" />
+                        <Label layoutX="174.0" layoutY="111.0" prefHeight="18.0" prefWidth="101.0" text="*Hits P2's left hand" />
+                        <Label layoutX="314.0" layoutY="112.0" text="*Hits P2's right hand" />
+                        <Label layoutX="189.0" layoutY="258.0" text="*Combines left hand onto right hand" />
+                        <Label layoutX="194.0" layoutY="327.0" text="*Combines right hand onto left hand" />
+                        <Button fx:id="buttonPrintHands" layoutX="465.0" layoutY="173.0" mnemonicParsing="false" onMouseClicked="#printHands" text="Print Current Hands" />
+                        <Label layoutX="455.0" layoutY="207.0" text="*Prints out current hands" />
+                        <Label layoutX="455.0" layoutY="219.0" text="to the console" />
+                        <Label layoutX="150.0" layoutY="146.0" text="Type into the console which" />
+                        <Label layoutX="150.0" layoutY="158.0" text="hand you want to hit with" />
+                        <Label layoutX="310.0" layoutY="146.0" text="Type into the console which" />
+                        <Label layoutX="310.0" layoutY="158.0" text="hand you want to hit with" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="user2Choice" disable="true" text="User 2 Choice">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="186.0" layoutY="25.0" text="Player 2, please choose your move">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonLeftHit2" layoutX="192.0" layoutY="82.0" mnemonicParsing="false" onMouseClicked="#leftHit2" text="Left Hit" textFill="RED" />
+                        <Button fx:id="buttonRightHit2" layoutX="339.0" layoutY="82.0" mnemonicParsing="false" onMouseClicked="#rightHit2" text="Right Hit" textFill="RED" />
+                        <Button fx:id="buttonRightCombine2" layoutX="243.0" layoutY="186.0" mnemonicParsing="false" onMouseClicked="#rightCombine2" text="Right Combine" textFill="RED" />
+                        <Button fx:id="buttonLeftCombine2" layoutX="247.0" layoutY="272.0" mnemonicParsing="false" onMouseClicked="#leftCombine2" text="Left Combine" textFill="RED" />
+                        <Label layoutX="172.0" layoutY="123.0" text="Hits P1's left hand" />
+                        <Label layoutX="319.0" layoutY="123.0" text="Hits P1's right hand" />
+                        <Label layoutX="196.0" layoutY="225.0" text="Combines left hand onto right hand" />
+                        <Label layoutX="196.0" layoutY="312.0" text="Combines right hand onto left hand" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>
